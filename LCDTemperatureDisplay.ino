@@ -16,11 +16,10 @@ const int temperaturePin = 3;
 // Enter a MAC address for your controller below.
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 
-// Your website's domain
-char server[] = "64.90.61.80";    
+// Your website's IP
+char server[] = "192.168.0.300";    
 
-// Set the static IP address to use if the DHCP fails to assign
-// be sure to set this to a valid ip in your subnet
+// For simplicity we're using a static IP address
 IPAddress ip(192,168,0,100);
 
 // This will be used to interact with ethernet shield
@@ -103,7 +102,7 @@ void httpRequest() {
   if (client.connect(server, 80)) {
     // send the HTTP PUT request:
     client.println("GET /weather.php HTTP/1.1");
-    client.println("Host: www.jonathonklem.com");
+    client.println("Host: www.yourhostname.com");
     client.println("Connection: close");
     client.println();
   } 
