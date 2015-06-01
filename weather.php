@@ -1,6 +1,6 @@
 <?php
 	// code from http://blog.worldweatheronline.com/2015/02/05/getting-started-world-weather-online-api-php/
-	$queryUrl = "api.worldweatheronline.com/free/v2/weather.ashx?q=Evansville&format=json&num_of_days=1&key=ba7c662279e32364d70915bf44392";
+	$queryUrl = "api.worldweatheronline.com/free/v2/weather.ashx?q=Evansville&format=json&num_of_days=1&key=yourkey";
 
 	/**
 	 * CURLOPT_RETURNTRANSFER - Return the response as a string instead of outputting it to the screen
