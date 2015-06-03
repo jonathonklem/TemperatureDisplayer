@@ -70,13 +70,13 @@ void loop()
           lcd.clear();
         }
         
+        // set our cursor to the beginning of the next line
         lcdColumn = 0; 
-        
         lcd.setCursor(lcdColumn, lcdLine);
-        
-        inSection = true;
         lcdLine = lcdLine + 1;
-       
+        
+        // make sure we acknowledge that we're in a section
+        inSection = true;
       } else {
         if (inSection) {
           lcd.print(c);
